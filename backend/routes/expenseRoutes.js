@@ -7,7 +7,7 @@ const {
   updateExpense,
 } = require('../controllers/expenseController');
 
-const authenticateToken = require('../utils/authenticateToken');
+const authenticateToken = require('../auth/tokenAuth');
 
 const router = express.Router();
 
