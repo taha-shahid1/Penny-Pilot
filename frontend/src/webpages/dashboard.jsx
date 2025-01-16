@@ -35,11 +35,11 @@ const TimeBasedGreeting = () => {
     const getGreeting = () => {
       const currentHour = new Date().getHours();
       if (currentHour < 12) {
-        return 'Good Morning';
+        return 'Good Morning!';
       } else if (currentHour < 18) {
-        return 'Good Afternoon';
+        return 'Good Afternoon!';
       } else {
-        return 'Good Evening';
+        return 'Good Evening!';
       }
     };
 
@@ -222,37 +222,37 @@ function Dashboard() {
     return (
         <>
         <Navbar tokenProp = {token} />
-        <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-950 to-gray-950 py-12 px-4 sm:px-6 lg:px-8">
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-cyan-950 to-sky-900 py-12 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
                 <TimeBasedGreeting />
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
                     <div className="flex flex-col justify-center space-y-5">
-                        <div className="bg-gray-900/50 backdrop-blur rounded-xl shadow-lg p-6 flex items-center space-x-4 border border-indigo-500/20">
-                            <div className="p-3 bg-indigo-400/20 rounded-full">
-                                <CurrencyDollarIcon className="h-8 w-8 text-indigo-300" />
+                        <div className="bg-gray-900/50 backdrop-blur rounded-xl shadow-lg p-6 flex items-center space-x-4 border border-sky-500/20">
+                            <div className="p-3 bg-sky-400/20 rounded-full">
+                                <CurrencyDollarIcon className="h-8 w-8 text-sky-400" />
                             </div>
                             <div>
-                                <p className="text-sm font-medium text-indigo-300">Total Expenses</p>
-                                <p className="text-2xl font-semibold text-indigo-100">${calculateTotalExpenses()}</p>
+                                <p className="text-sm font-medium text-sky-400">Total Expenses</p>
+                                <p className="text-2xl font-semibold text-white">${calculateTotalExpenses()}</p>
                             </div>
                         </div>
-                        <div className="bg-gray-900/50 backdrop-blur rounded-xl shadow-lg p-6 flex items-center space-x-4 border border-indigo-500/20">
-                            <div className="p-3 bg-indigo-400/20 rounded-full">
-                                <ChartBarIcon className="h-8 w-8 text-indigo-300" />
+                        <div className="bg-gray-900/50 backdrop-blur rounded-xl shadow-lg p-6 flex items-center space-x-4 border border-sky-500/20">
+                            <div className="p-3 bg-sky-400/20 rounded-full">
+                                <ChartBarIcon className="h-8 w-8 text-sky-400" />
                             </div>
                             <div>
-                                <p className="text-sm font-medium text-indigo-300">Number of Expenses</p>
-                                <p className="text-2xl font-semibold text-indigo-100">{expenses.length}</p>
+                                <p className="text-sm font-medium text-sky-400">Number of Expenses</p>
+                                <p className="text-2xl font-semibold text-white">{expenses.length}</p>
                             </div>
                         </div>
-                        <div className="bg-gray-900/50 backdrop-blur rounded-xl shadow-lg p-6 flex items-center space-x-4 border border-indigo-500/20">
-                            <div className="p-3 bg-indigo-400/20 rounded-full">
-                                <CalendarIcon className="h-8 w-8 text-indigo-300" />
+                        <div className="bg-gray-900/50 backdrop-blur rounded-xl shadow-lg p-6 flex items-center space-x-4 border border-sky-500/20">
+                            <div className="p-3 bg-sky-400/20 rounded-full">
+                                <CalendarIcon className="h-8 w-8 text-sky-400" />
                             </div>
                             <div>
-                                <p className="text-sm font-medium text-indigo-300">Last Updated</p>
-                                <p className="text-2xl font-semibold text-indigo-100">{new Date().toLocaleDateString()}</p>
+                                <p className="text-sm font-medium text-sky-400">Last Updated</p>
+                                <p className="text-2xl font-semibold text-white">{new Date().toLocaleDateString()}</p>
                             </div>
                         </div>
                     </div>
@@ -325,26 +325,26 @@ function Dashboard() {
                     </div>
                 </div>
 
-                <div className="bg-gray-900/50 backdrop-blur shadow-lg rounded-xl overflow-hidden mb-8 border border-indigo-500/20">
+                <div className="bg-gray-900/50 backdrop-blur shadow-lg rounded-xl overflow-hidden mb-8 border border-sky-500/20">
                     <div className="p-6">
-                        <h2 className="text-2xl font-semibold text-indigo-100">Expense List</h2>
+                        <h2 className="text-2xl font-semibold text-white">Expense List</h2>
                     </div>
                     <div className="overflow-x-auto">
-                        <table className="min-w-full divide-y divide-indigo-500/20">
+                        <table className="min-w-full divide-y divide-sky-500/20">
                             <thead className="bg-gray-900/50">
                                 <tr>
-                                    <th className="px-6 py-3 text-left text-xs font-medium text-indigo-300 uppercase tracking-wider">Description</th>
-                                    <th className="px-6 py-3 text-left text-xs font-medium text-indigo-300 uppercase tracking-wider">Amount</th>
-                                    <th className="px-6 py-3 text-left text-xs font-medium text-indigo-300 uppercase tracking-wider">Date</th>
-                                    <th className="px-6 py-3 text-left text-xs font-medium text-indigo-300 uppercase tracking-wider">Category</th>
-                                    <th className="px-6 py-3 text-left text-xs font-medium text-indigo-300 uppercase tracking-wider">Actions</th>
+                                    <th className="px-6 py-3 text-left text-xs font-medium text-sky-400 uppercase tracking-wider">Description</th>
+                                    <th className="px-6 py-3 text-left text-xs font-medium text-sky-400 uppercase tracking-wider">Amount</th>
+                                    <th className="px-6 py-3 text-left text-xs font-medium text-sky-400 uppercase tracking-wider">Date</th>
+                                    <th className="px-6 py-3 text-left text-xs font-medium text-sky-400 uppercase tracking-wider">Category</th>
+                                    <th className="px-6 py-3 text-left text-xs font-medium text-sky-400 uppercase tracking-wider">Actions</th>
                                 </tr>
                             </thead>
-                            <tbody className="divide-y divide-indigo-500/20">
+                            <tbody className="divide-y divide-sky-500/20">
                                 {[...expenses]
                                     .sort((a, b) => new Date(b.date) - new Date(a.date))  // Sort by date, newest first
                                     .map((expense) => (
-                                        <tr key={expense._id} className="hover:bg-indigo-500/10 transition duration-150">
+                                        <tr key={expense._id} className="hover:bg-sky-500/10 transition duration-150">
                                             <td className="px-6 py-4 whitespace-nowrap">
                                                 <input
                                                     type="text"
@@ -357,7 +357,7 @@ function Dashboard() {
                                                         );
                                                         setExpenses(updatedExpenses);
                                                     }}
-                                                    className="w-full px-2 py-1 rounded bg-gray-900/50 text-indigo-100 border border-indigo-500/30 focus:border-indigo-500 focus:ring focus:ring-indigo-500/20 transition duration-150"
+                                                    className="w-full px-2 py-1 rounded bg-gray-900/50 text-white border border-sky-500/30 focus:border-sky-500 focus:ring focus:ring-sky-500/20 transition duration-150"
                                                 />
                                             </td>
                                             <td className="px-6 py-4 whitespace-nowrap">
@@ -370,7 +370,7 @@ function Dashboard() {
                                                         );
                                                         setExpenses(updatedExpenses);
                                                     }}
-                                                    className="w-full px-2 py-1 rounded bg-gray-900/50 text-indigo-100 border border-indigo-500/30 focus:border-indigo-500 focus:ring focus:ring-indigo-500/20 transition duration-150"
+                                                    className="w-full px-2 py-1 rounded bg-gray-900/50 text-white border border-sky-500/30 focus:border-sky-500 focus:ring focus:ring-sky-500/20 transition duration-150"
                                                 />
                                             </td>
                                             <td className="px-6 py-4 whitespace-nowrap">
@@ -386,7 +386,7 @@ function Dashboard() {
                                                         setExpenses(updatedExpenses);
                                                     }}
                                                     style={dateInputStyle}
-                                                    className="[color-scheme:dark]px-2 py-1 rounded bg-gray-900/50 text-indigo-100 border border-indigo-500/30 focus:border-indigo-500 focus:ring focus:ring-indigo-500/20 transition duration-150"
+                                                    className="[color-scheme:dark]px-2 py-1 rounded bg-gray-900/50 text-white border border-sky-500/30 focus:border-sky-500 focus:ring focus:ring-sky-500/20 transition duration-150"
                                                     
                                                 />
                                             </td>
@@ -399,7 +399,7 @@ function Dashboard() {
                                                         );
                                                         setExpenses(updatedExpenses);
                                                     }}
-                                                    className="w-full px-2 py-1 rounded bg-gray-900/50 text-indigo-100 border border-indigo-500/30 focus:border-indigo-500 focus:ring focus:ring-indigo-500/20 transition duration-150"
+                                                    className="w-full px-2 py-1 rounded bg-gray-900/50 text-white border border-sky-500/30 focus:border-sky-500 focus:ring focus:ring-sky-500/20 transition duration-150"
                                                 >
                                                     <option value="">Select a category</option>
                                                     <option value="Food">Food</option>
@@ -413,7 +413,7 @@ function Dashboard() {
                                                 <button onClick={() => handleDelete(expense._id)} className="text-rose-400 hover:text-rose-300 mr-2 transition duration-150">
                                                     <TrashIcon className="h-5 w-5" />
                                                 </button>
-                                                <button onClick={() => handleUpdate(expense)} className="text-indigo-400 hover:text-indigo-300 transition duration-150">
+                                                <button onClick={() => handleUpdate(expense)} className="text-sky-400 hover:text-sky-400 transition duration-150">
                                                     <PencilIcon className="h-5 w-5" />
                                                 </button>
                                             </td>
@@ -424,12 +424,12 @@ function Dashboard() {
                     </div>
                 </div>
 
-                <div className="bg-gray-900/50 backdrop-blur shadow-lg rounded-xl p-6 border border-indigo-500/20 mb-16">
-                    <h2 className="text-2xl font-semibold mb-4 text-indigo-100">Add New Expense</h2>
+                <div className="bg-gray-900/50 backdrop-blur shadow-lg rounded-xl p-6 border border-sky-500/20 mb-16">
+                    <h2 className="text-2xl font-semibold mb-4 text-white">Add New Expense</h2>
                     <form onSubmit={handleSubmit} className="space-y-4">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div>
-                                <label htmlFor="description" className="block text-sm font-medium text-indigo-300">Description</label>
+                                <label htmlFor="description" className="block text-sm font-medium text-sky-400">Description</label>
                                 <input
                                     id="description"
                                     type="text"
@@ -437,11 +437,11 @@ function Dashboard() {
                                     value={newExpense.description}
                                     onChange={(e) => setNewExpense({ ...newExpense, description: e.target.value })}
                                     required
-                                    className="mt-1 block w-full px-3 py-2 bg-gray-900/50 border border-indigo-500/30 rounded-md shadow-sm text-indigo-100 placeholder-indigo-500/50 focus:border-indigo-500 focus:ring focus:ring-indigo-500/20"
+                                    className="mt-1 block w-full px-3 py-2 bg-gray-900/50 border border-sky-500/30 rounded-md shadow-sm text-white placeholder-sky-500/50 focus:border-sky-500 focus:ring focus:ring-sky-500/20"
                                 />
                             </div>
                             <div>
-                                <label htmlFor="amount" className="block text-sm font-medium text-indigo-300">Amount</label>
+                                <label htmlFor="amount" className="block text-sm font-medium text-sky-400">Amount</label>
                                 <input
                                     id="amount"
                                     type="number"
@@ -449,29 +449,29 @@ function Dashboard() {
                                     value={newExpense.amount}
                                     onChange={(e) => setNewExpense({ ...newExpense, amount: e.target.value })}
                                     required
-                                    className="mt-1 block w-full px-3 py-2 bg-gray-900/50 border border-indigo-500/30 rounded-md shadow-sm text-indigo-100 placeholder-indigo-500/50 focus:border-indigo-500 focus:ring focus:ring-indigo-500/20"
+                                    className="mt-1 block w-full px-3 py-2 bg-gray-900/50 border border-sky-500/30 rounded-md shadow-sm text-white placeholder-sky-500/50 focus:border-sky-500 focus:ring focus:ring-sky-500/20"
                                 />
                             </div>
                             <div>
-                                <label htmlFor="date" className="block text-sm font-medium text-indigo-300">Date</label>
+                                <label htmlFor="date" className="block text-sm font-medium text-sky-400">Date</label>
                                 <input
                                     id="date"
                                     type="date"
                                     value={newExpense.date}
                                     onChange={(e) => setNewExpense({ ...newExpense, date: e.target.value })}
                                     required
-                                    className="mt-1 block w-full px-3 py-2 bg-gray-900/50 border border-indigo-500/30 rounded-md shadow-sm text-indigo-100 focus:border-indigo-500 focus:ring focus:ring-indigo-500/20"
+                                    className="mt-1 block w-full px-3 py-2 bg-gray-900/50 border border-sky-500/30 rounded-md shadow-sm text-white focus:border-sky-500 focus:ring focus:ring-sky-500/20"
                                     style={dateInputStyle}
                                 />
                             </div>
                             <div>
-                                <label htmlFor="category" className="block text-sm font-medium text-indigo-300">Category</label>
+                                <label htmlFor="category" className="block text-sm font-medium text-sky-400">Category</label>
                                 <select
                                     id="category"
                                     value={newExpense.category}
                                     onChange={(e) => setNewExpense({ ...newExpense, category: e.target.value })}
                                     required
-                                    className="mt-1 block w-full px-3 py-2 bg-gray-900/50 border border-indigo-500/30 rounded-md shadow-sm text-indigo-100 focus:border-indigo-500 focus:ring focus:ring-indigo-500/20"
+                                    className="mt-1 block w-full px-3 py-2 bg-gray-900/50 border border-sky-500/30 rounded-md shadow-sm text-white focus:border-sky-500 focus:ring focus:ring-sky-500/20"
                                 >
                                     <option value="">Select a category</option>
                                     <option value="Food">Food</option>
@@ -483,7 +483,7 @@ function Dashboard() {
                             </div>
                         </div>
                         <div>
-                            <button type="submit" className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-700 hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition duration-150">
+                            <button type="submit" className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-sky-600 hover:bg-sky-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500 transition duration-150">
                                 <PlusIcon className="h-5 w-5 mr-2" />
                                 Add Expense
                             </button>

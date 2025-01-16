@@ -20,12 +20,12 @@ function Navbar(props) {
                 to="/" 
                 className="px-6 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md transition duration-150"
                 >
-                <button onClick = {logOut}>Log Out</button>
+                <button onClick = {logOut}>Sign Out</button>
                 </Link>
             ) : (
                 <Link 
                 to="/login" 
-                className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition duration-150"
+                className="px-6 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md transition duration-150"
                 >
                 Sign In
               </Link>
