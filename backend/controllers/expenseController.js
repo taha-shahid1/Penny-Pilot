@@ -37,8 +37,8 @@ exports.deleteExpense = async (req, res) => {
       if (!expense) return res.status(404).send('Expense not found');
   
       res.send('Expense deleted');
-    } catch (err) {
-      res.status(500).send('Server error');
+    } catch (error) {
+      res.status(500).send(error);
     }
 };
 
