@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from "react-router-dom"
 import { ArrowRight, LineChart, DollarSign, Notebook, Shield } from 'lucide-react'
 import { motion } from 'framer-motion'
+import Navbar from './navbar'
 
 function Landing() {
   const containerVariants = {
@@ -22,8 +23,11 @@ function Landing() {
       opacity: 1
     }
   }
+  const token = localStorage.getItem('token');
 
   return (
+    <>
+    <Navbar tokenProp = {token} />
     <div className="flex flex-col min-h-screen bg-gradient-to-br from-gray-900 via-indigo-950 to-gray-900 z-0">
       
       <main className="container mx-auto px-4 py-28 flex-grow relative">
@@ -67,7 +71,7 @@ function Landing() {
           {[
             { icon: LineChart, title: "Expense Tracking", description: "Categorize and visualize your spending habits" },
             { icon: DollarSign, title: "Budget Planning", description: "Set and manage budgets for the month" },
-            { icon: Notebook, title: "Organization", description: "Organize all finances in one place" },
+            { icon: Notebook, title: "Organization", description: "Organize all expenses in one place" },
             { icon: Shield, title: "Secure & Private", description: "Your financial data is encrypted and never shared" },
           ].map((feature, index) => (
             <motion.div 
@@ -83,6 +87,7 @@ function Landing() {
         </motion.div>
       </main>
     </div>
+  </>
   )
 }
 

@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import axios from "axios";
 import { useEffect } from "react";
 import { useState } from "react";
 import { PlusIcon, TrashIcon, PencilIcon, ChartBarIcon, CurrencyDollarIcon, CalendarIcon } from '@heroicons/react/20/solid';
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, Title, Tooltip, Legend, LineElement } from 'chart.js';
 import { Line } from 'react-chartjs-2';
 import API from "../api";
+import Navbar from "./navbar";
 
 ChartJS.register(
     CategoryScale,
@@ -109,8 +109,8 @@ export const deleteExpense = async (id) => {
 
 
 function Dashboard() {
+    const token = localStorage.getItem('token');
     const [expenses, setExpenses] = useState([]);
-    const { isSignedIn } = useAuth();
     const [newExpense, setNewExpense] = useState({
         description: '',
         amount: '',
@@ -216,17 +216,11 @@ function Dashboard() {
         return expenses.reduce((total, expense) => total + parseFloat(expense.amount), 0).toFixed(2);
     }
 
-    if (!isSignedIn) {
-        return (
-            <div className="flex items-center justify-center h-screen bg-gradient-to-br from-gray-900 via-indigo-950 to-gray-900">
-                <Link to="/sign-in" className="px-6 py-3 text-indigo-100 bg-indigo-600 rounded-full hover:bg-indigo-500 transition duration-300 shadow-lg hover:shadow-indigo-500/30">
-                    Please sign in
-                </Link>
-            </div>
-        );
-    }
+
 
     return (
+        <>
+        <Navbar tokenProp = {token} />
         <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-950 to-gray-950 py-12 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
                 <TimeBasedGreeting />
@@ -497,6 +491,7 @@ function Dashboard() {
                 </div>
             </div>
         </div>
+    </>
     );
 }
 

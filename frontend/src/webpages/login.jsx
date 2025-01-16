@@ -3,6 +3,10 @@ import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import API from '../api';
 
+function LogOut(){
+  localStorage.removeItem("token");
+}
+
 function Login() {
   const { register, handleSubmit } = useForm();
   const navigate = useNavigate();
@@ -22,8 +26,8 @@ function Login() {
     <div>
       <h2>Login</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <input type="email" placeholder="Email" {...register('email')} required />
-        <input type="password" placeholder="Password" {...register('password')} required />
+        <input type="text" placeholder="Username" {...register('username')} required />
+        <input type="password" placeholder="Password (Minimum length of 6 characters)" {...register('password')} required />
         <button type="submit">Login</button>
       </form>
     </div>

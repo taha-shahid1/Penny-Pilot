@@ -5,7 +5,7 @@ const { body } = require('express-validator');
 const router = express.Router();
 
 router.post('/register', [
-  body('email').isEmail(),
+  body('username'),
   body('password').isLength({ min: 6 }),
 ], register);
 

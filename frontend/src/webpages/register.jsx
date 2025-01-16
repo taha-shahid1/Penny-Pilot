@@ -13,7 +13,7 @@ function Register() {
       reset();
       navigate('/login')
     } catch (err) {
-      alert(err.response?.data || 'Registration failed!');
+      alert(err || 'Registration failed!');
     }
   };
 
@@ -21,8 +21,8 @@ function Register() {
     <div>
       <h2>Register</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <input type="email" placeholder="Email" {...register('email')} required />
-        <input type="password" placeholder="Password" {...register('password')} required />
+        <input type="text" placeholder="Username" {...register('username')} required />
+        <input type="password" placeholder="Password (Minimum length of 6 characters)" {...register('password')} required />
         <button type="submit">Register</button>
       </form>
     </div>
