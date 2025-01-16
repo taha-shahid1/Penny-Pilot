@@ -15,7 +15,7 @@ exports.register = async (req, res) => {
     const existingUser = await User.findOne({ username });
 
     if (existingUser){
-        return res.status(400).send('User already exists!');
+        return res.status(400).json({ error: 'User already exists' });
     }
 
     const salt = await bcrypt.genSalt(10);
@@ -26,6 +26,7 @@ exports.register = async (req, res) => {
 
     res.status(201).send('User registered');
   } catch (error) {
+    console.error(error);
     res.status(500).send(error);
   }
 };
@@ -36,11 +37,11 @@ exports.login = async (req, res) => {
   try {
     const user = await User.findOne({ username });
     if (!user){ 
-        return res.status(400).send('User not found');
+        return res.status(400).json({ error: 'User not found' });
     }
     const validPassword = await bcrypt.compare(password, user.password);
     if (!validPassword) {
-        return res.status(400).send('Invalid credentials');
+        return res.status(400).json({ error: 'Invalid credentials' });
     }
     const token = jwt.sign({ _id: user._id }, process.env.SECRETKEY);
     res.json({ token });

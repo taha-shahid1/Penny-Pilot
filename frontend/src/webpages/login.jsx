@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { UserIcon, KeyIcon } from 'lucide-react';
 import API from '../api';
 import { Link } from "react-router-dom";
+import { useState } from 'react';
 
 function LogOut() {
   localStorage.removeItem("token");
@@ -12,14 +13,14 @@ function LogOut() {
 function Login() {
   const { register, handleSubmit } = useForm();
   const navigate = useNavigate();
-
+  const [errorMessage, setErrorMessage] = useState(null);
   const onSubmit = async (data) => {
     try {
       const response = await API.post('/api/auth/login', data);
       localStorage.setItem('token', response.data.token);
       navigate('/dashboard');
     } catch (err) {
-      navigate('/register');
+      setErrorMessage('Login failed. Check if your username or password is correct.')
     }
   };
 
@@ -57,7 +58,11 @@ function Login() {
           >
             Login
           </button>
-
+          {errorMessage && (
+            <div className="text-center text-red-500 my-4">
+              {errorMessage}
+            </div>
+          )}
           <div className = "text-center text-lg">
             <p className = "text-white">Dont have an account?</p> 
             <Link to = "/register" className = "text-sky-400">Register here</Link>
