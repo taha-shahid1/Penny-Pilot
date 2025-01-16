@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { UserIcon, KeyIcon } from 'lucide-react';
 import API from '../api';
+import { Link } from "react-router-dom";
 
 function LogOut() {
   localStorage.removeItem("token");
@@ -56,6 +57,11 @@ function Login() {
           >
             Login
           </button>
+
+          <div className = "text-center text-lg">
+            <p className = "text-white">Dont have an account?</p> 
+            <Link to = "/register" className = "text-sky-400">Register here</Link>
+          </div>
         </form>
       </div>
     </div>
