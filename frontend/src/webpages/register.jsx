@@ -9,11 +9,11 @@ function Register() {
   const onSubmit = async (data) => {
     try {
       await API.post('/api/auth/register', data);
-      alert('Registration successful! You can now log in.');
+      alert('Registration successful!');
       reset();
       navigate('/login')
-    } catch (err) {
-      alert(err || 'Registration failed!');
+    } catch (error) {
+      alert(error || 'Registration failed!');
     }
   };
 

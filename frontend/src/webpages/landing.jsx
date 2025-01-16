@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom"
-import { ArrowRight, LineChart, DollarSign, Notebook, Shield } from 'lucide-react'
+import { ArrowRight, Archive, LineChart, DollarSign, Notebook } from 'lucide-react'
 import { motion } from 'framer-motion'
 import Navbar from './navbar'
 
@@ -33,7 +33,7 @@ function Landing() {
       <main className="container mx-auto px-4 py-28 flex-grow relative">
         <div className="text-center mb-16">
           <motion.h1 
-            className="text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-100 to-indigo-200 mb-4"
+            className="text-6xl font-bold bg-clip-text text-gray-100 mb-4"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -41,7 +41,7 @@ function Landing() {
             Take Control of Your Finances
           </motion.h1>
           <motion.p 
-            className="text-xl text-indigo-100 mb-12"
+            className="text-xl text-gray-100 mb-12"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -63,16 +63,16 @@ function Landing() {
         </div>
 
         <motion.div 
-          className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 py-10"
+          className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 py-10 "
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
           {[
-            { icon: LineChart, title: "Expense Tracking", description: "Categorize and visualize your spending habits" },
+            { icon: LineChart, title: "Expense Tracking", description: "Categorize and visualize your spending habits to make smarter financial choices" },
+            { icon : Archive, title: "Categorization", description: "Sort your expenses into categories like food, transport, entertainment, and utilities" },
             { icon: DollarSign, title: "Budget Planning", description: "Set and manage budgets for the month" },
             { icon: Notebook, title: "Organization", description: "Organize all expenses in one place" },
-            { icon: Shield, title: "Secure & Private", description: "Your financial data is encrypted and never shared" },
           ].map((feature, index) => (
             <motion.div 
               key={index} 

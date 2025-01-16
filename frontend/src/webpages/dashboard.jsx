@@ -7,6 +7,7 @@ import { Line } from 'react-chartjs-2';
 import API from "../api";
 import Navbar from "./navbar";
 
+
 ChartJS.register(
     CategoryScale,
     LinearScale,

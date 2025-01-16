@@ -15,7 +15,6 @@ function Login() {
     try {
       const response = await API.post('/api/auth/login', data);
       localStorage.setItem('token', response.data.token);
-      alert('Login successful!');
       navigate('/dashboard');
     } catch (err) {
         navigate('/register')
