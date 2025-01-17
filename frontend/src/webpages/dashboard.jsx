@@ -314,6 +314,7 @@ function Dashboard() {
                                                 <td className="px-6 py-4 whitespace-nowrap">
                                                     <input
                                                         type="number"
+                                                        min="0"
                                                         value={expense.amount}
                                                         onChange={(e) => {
                                                             const updatedExpenses = expenses.map(exp =>
@@ -400,6 +401,7 @@ function Dashboard() {
                                     <input
                                         id="amount"
                                         type="number"
+                                        min="0"
                                         placeholder="Amount"
                                         value={newExpense.amount}
                                         onChange={(e) => setNewExpense({ ...newExpense, amount: e.target.value })}
