@@ -8,7 +8,7 @@ const expenseRoutes = require('./routes/expenseRoutes');
 const app = express();
 
 const corsOptions = {
-  origin: '*',  // Allow only this origin // Allow these HTTP methods
+  origin: 'https://www.pennypilot.dev', 
   allowedHeaders: 'Content-Type,Authorization',  // Allow these headers
 };
 
