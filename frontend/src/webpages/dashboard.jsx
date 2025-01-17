@@ -315,6 +315,7 @@ function Dashboard() {
                                                     <input
                                                         type="number"
                                                         min="0"
+                                                        step="any"
                                                         value={expense.amount}
                                                         onChange={(e) => {
                                                             const updatedExpenses = expenses.map(exp =>
@@ -402,6 +403,7 @@ function Dashboard() {
                                         id="amount"
                                         type="number"
                                         min="0"
+                                        step="any"
                                         placeholder="Amount"
                                         value={newExpense.amount}
                                         onChange={(e) => setNewExpense({ ...newExpense, amount: e.target.value })}
