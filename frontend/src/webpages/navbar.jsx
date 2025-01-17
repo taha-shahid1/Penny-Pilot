@@ -18,14 +18,14 @@ function Navbar(props) {
             {props.tokenProp ? (
                 <Link 
                 to="/" 
-                className="px-6 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md transition duration-150"
+                className="text-base px-6 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md transition duration-150"
                 >
                 <button onClick = {logOut}>Sign Out</button>
                 </Link>
             ) : (
                 <Link 
                 to="/login" 
-                className="px-6 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md transition duration-150"
+                className="text-base px-6 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md transition duration-150"
                 >
                 Sign In
               </Link>
