@@ -8,7 +8,7 @@ const expenseRoutes = require('./routes/expenseRoutes');
 const app = express();
 
 const corsOptions = {
-  origin: 'http://localhost:5173',  // Allow only this origin // Allow these HTTP methods
+  origin: '*',  // Allow only this origin // Allow these HTTP methods
   allowedHeaders: 'Content-Type,Authorization',  // Allow these headers
 };
 

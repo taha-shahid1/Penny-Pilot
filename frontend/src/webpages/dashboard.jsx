@@ -355,6 +355,7 @@ function Dashboard() {
                                                         <option value="">Select a category</option>
                                                         <option value="Food">Food</option>
                                                         <option value="Transport">Transport</option>
+                                                        <option value="Membership">Membership</option>
                                                         <option value="Entertainment">Entertainment</option>
                                                         <option value="Utilities">Utilities</option>
                                                         <option value="Other">Other</option>
@@ -429,6 +430,7 @@ function Dashboard() {
                                     >
                                         <option value="">Select a category</option>
                                         <option value="Food">Food</option>
+                                        <otion value="Membership">Membership</otion>
                                         <option value="Transport">Transport</option>
                                         <option value="Entertainment">Entertainment</option>
                                         <option value="Utilities">Utilities</option>
