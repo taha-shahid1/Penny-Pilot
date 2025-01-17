@@ -432,7 +432,7 @@ function Dashboard() {
                                     >
                                         <option value="">Select a category</option>
                                         <option value="Food">Food</option>
-                                        <otion value="Membership">Membership</otion>
+                                        <option value="Membership">Membership</option>
                                         <option value="Transport">Transport</option>
                                         <option value="Entertainment">Entertainment</option>
                                         <option value="Utilities">Utilities</option>

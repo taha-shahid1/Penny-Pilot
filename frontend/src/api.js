@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: 'https://penny-pilot-api.vercel.app',
+  baseURL: 'https://penny-pilot-api-jgfv.onrender.com',
 });
 
 API.interceptors.request.use((req) => {
