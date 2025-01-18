@@ -23,14 +23,18 @@ function Navbar(props) {
             <PiCoins className="h-8 w-8" />
             <span>Penny-Pilot</span>
           </Link>
-
+          
           <div className="flex items-center space-x-4">
             {isLoggedIn ? (
               <button
                 onClick={logOut}
                 className="text-base px-6 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md transition duration-150"
               >
-                Sign Out
+                <Link
+                  to="/"
+                >
+                  Sign Out
+                </Link>
               </button>
             ) : (
               <Link
